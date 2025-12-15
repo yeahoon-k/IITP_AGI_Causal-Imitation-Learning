@@ -1,4 +1,4 @@
-# IITP_AGI_Causal Imitation Learning
+# IITP AGI Causal Imitation Learning
 
 This repository contains the implementation of an causal imitation learning model.
 
