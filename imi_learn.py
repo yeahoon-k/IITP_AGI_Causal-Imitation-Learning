@@ -216,6 +216,16 @@ def main(n_repeats=10, sample_size=5000, n_cpu=5):
     print(np.mean(MSE_bases), np.std(MSE_bases))
     print(np.mean(MSE_props), np.std(MSE_props))
 
+    base_mean = np.mean(MSE_bases)
+    base_std = np.std(MSE_bases)
+    prop_mean = np.mean(MSE_props)
+    prop_std = np.std(MSE_props)
+
+    # diff
+    abs_diff = base_mean - prop_mean
+    rel_diff = abs_diff / base_mean * 100
+    print(f"Rel diff: {rel_diff:.2f}%")
+
 
 def _inner2_(name, sample_size, seed):
     np.random.seed(seed)
